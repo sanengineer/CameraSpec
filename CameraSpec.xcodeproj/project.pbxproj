@@ -54,14 +54,46 @@
 		53A98078249A2B2E005F9F6C /* CameraSpec */ = {
 			isa = PBXGroup;
 			children = (
-				53A98079249A2B2E005F9F6C /* AppDelegate.swift */,
-				53A9807B249A2B2E005F9F6C /* ViewController.swift */,
-				53A9807D249A2B2E005F9F6C /* Main.storyboard */,
+				53A9808E249A2C02005F9F6C /* Controller */,
+				53A9808D249A2BFC005F9F6C /* View */,
+				53A9808C249A2BF6005F9F6C /* Model */,
+				53A9808B249A2BE7005F9F6C /* Base */,
 				53A98080249A2B2F005F9F6C /* Assets.xcassets */,
-				53A98082249A2B2F005F9F6C /* LaunchScreen.storyboard */,
 				53A98085249A2B2F005F9F6C /* Info.plist */,
 			);
 			path = CameraSpec;
+			sourceTree = "<group>";
+		};
+		53A9808B249A2BE7005F9F6C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		53A9808C249A2BF6005F9F6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				53A98079249A2B2E005F9F6C /* AppDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		53A9808D249A2BFC005F9F6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53A9807D249A2B2E005F9F6C /* Main.storyboard */,
+				53A98082249A2B2F005F9F6C /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		53A9808E249A2C02005F9F6C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				53A9807B249A2B2E005F9F6C /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
