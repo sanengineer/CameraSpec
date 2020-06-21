@@ -12,6 +12,14 @@
 		53A9807F249A2B2E005F9F6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A9807D249A2B2E005F9F6C /* Main.storyboard */; };
 		53A98081249A2B2F005F9F6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53A98080249A2B2F005F9F6C /* Assets.xcassets */; };
 		53A98084249A2B2F005F9F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53A98082249A2B2F005F9F6C /* LaunchScreen.storyboard */; };
+		53F4FE57249FB63000D80651 /* CameraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4FE55249FB63000D80651 /* CameraTableViewCell.swift */; };
+		53F4FE58249FB63000D80651 /* CameraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F4FE56249FB63000D80651 /* CameraTableViewCell.xib */; };
+		53F4FE5A249FBB1500D80651 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4FE59249FBB1500D80651 /* Camera.swift */; };
+		53F4FE5C249FBB7A00D80651 /* DataCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4FE5B249FBB7A00D80651 /* DataCamera.swift */; };
+		53F4FE5F249FBD8000D80651 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4FE5D249FBD8000D80651 /* DetailViewController.swift */; };
+		53F4FE60249FBD8000D80651 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F4FE5E249FBD8000D80651 /* DetailViewController.xib */; };
+		53F4FE63249FCA0E00D80651 /* AboutAuthorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F4FE61249FCA0E00D80651 /* AboutAuthorViewController.swift */; };
+		53F4FE64249FCA0E00D80651 /* AboutAuthorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53F4FE62249FCA0E00D80651 /* AboutAuthorViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		53A98080249A2B2F005F9F6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53A98083249A2B2F005F9F6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53A98085249A2B2F005F9F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53F4FE55249FB63000D80651 /* CameraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTableViewCell.swift; sourceTree = "<group>"; };
+		53F4FE56249FB63000D80651 /* CameraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraTableViewCell.xib; sourceTree = "<group>"; };
+		53F4FE59249FBB1500D80651 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		53F4FE5B249FBB7A00D80651 /* DataCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCamera.swift; sourceTree = "<group>"; };
+		53F4FE5D249FBD8000D80651 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		53F4FE5E249FBD8000D80651 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		53F4FE61249FCA0E00D80651 /* AboutAuthorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAuthorViewController.swift; sourceTree = "<group>"; };
+		53F4FE62249FCA0E00D80651 /* AboutAuthorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutAuthorViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +70,10 @@
 		53A98078249A2B2E005F9F6C /* CameraSpec */ = {
 			isa = PBXGroup;
 			children = (
-				53A9808E249A2C02005F9F6C /* Controller */,
-				53A9808D249A2BFC005F9F6C /* View */,
-				53A9808C249A2BF6005F9F6C /* Model */,
 				53A9808B249A2BE7005F9F6C /* Base */,
+				53A9808C249A2BF6005F9F6C /* Model */,
+				53A9808D249A2BFC005F9F6C /* View */,
+				53A9808E249A2C02005F9F6C /* Controller */,
 				53A98080249A2B2F005F9F6C /* Assets.xcassets */,
 				53A98085249A2B2F005F9F6C /* Info.plist */,
 			);
@@ -67,6 +83,7 @@
 		53A9808B249A2BE7005F9F6C /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				53A98079249A2B2E005F9F6C /* AppDelegate.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -74,7 +91,8 @@
 		53A9808C249A2BF6005F9F6C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				53A98079249A2B2E005F9F6C /* AppDelegate.swift */,
+				53F4FE59249FBB1500D80651 /* Camera.swift */,
+				53F4FE5B249FBB7A00D80651 /* DataCamera.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +102,9 @@
 			children = (
 				53A9807D249A2B2E005F9F6C /* Main.storyboard */,
 				53A98082249A2B2F005F9F6C /* LaunchScreen.storyboard */,
+				53F4FE62249FCA0E00D80651 /* AboutAuthorViewController.xib */,
+				53F4FE56249FB63000D80651 /* CameraTableViewCell.xib */,
+				53F4FE5E249FBD8000D80651 /* DetailViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,6 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				53A9807B249A2B2E005F9F6C /* ViewController.swift */,
+				53F4FE61249FCA0E00D80651 /* AboutAuthorViewController.swift */,
+				53F4FE5D249FBD8000D80651 /* DetailViewController.swift */,
+				53F4FE55249FB63000D80651 /* CameraTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -154,7 +178,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F4FE58249FB63000D80651 /* CameraTableViewCell.xib in Resources */,
 				53A98084249A2B2F005F9F6C /* LaunchScreen.storyboard in Resources */,
+				53F4FE60249FBD8000D80651 /* DetailViewController.xib in Resources */,
+				53F4FE64249FCA0E00D80651 /* AboutAuthorViewController.xib in Resources */,
 				53A98081249A2B2F005F9F6C /* Assets.xcassets in Resources */,
 				53A9807F249A2B2E005F9F6C /* Main.storyboard in Resources */,
 			);
@@ -167,6 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53F4FE63249FCA0E00D80651 /* AboutAuthorViewController.swift in Sources */,
+				53F4FE5A249FBB1500D80651 /* Camera.swift in Sources */,
+				53F4FE5C249FBB7A00D80651 /* DataCamera.swift in Sources */,
+				53F4FE57249FB63000D80651 /* CameraTableViewCell.swift in Sources */,
+				53F4FE5F249FBD8000D80651 /* DetailViewController.swift in Sources */,
 				53A9807C249A2B2E005F9F6C /* ViewController.swift in Sources */,
 				53A9807A249A2B2E005F9F6C /* AppDelegate.swift in Sources */,
 			);
