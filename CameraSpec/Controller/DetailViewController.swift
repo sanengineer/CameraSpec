@@ -20,9 +20,6 @@ class DetailViewController: UIViewController {
     let backButton = UIBarButtonItem()
     
     // ??
-    // let attributedString = NSMutableAttributedString()
-    
-    // ??
     let paragraphStyle = NSMutableParagraphStyle()
     
     override func viewDidLoad() {
@@ -54,26 +51,6 @@ class DetailViewController: UIViewController {
         photoCamera.layer.cornerRadius = 4
         photoCamera.clipsToBounds = true
         
-        // Set Line Height
-        // paragraphStyle.lineSpacing = 1.5
-        
-        // ??
-        // attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
-        
-        // ??
-        // descCamera.attributedText = attributedString
-        
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

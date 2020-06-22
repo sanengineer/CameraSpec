@@ -56,24 +56,25 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Menghubungkan Cell dengan Identifier "CameraCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CameraCell", for: indexPath) as! CameraTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CameraCell", for: indexPath) as? CameraTableViewCell
         
         // Menetapkan Nilai Hero Ke View Di Dalam Cell
         let camera = cameraMany[indexPath.row]
         
         // Memasukkan Data Ke Setiap View Dan Label Yang Ada
-        cell.photoCamera.image = camera.photo
-        cell.nameCamera.text = camera.name
-        cell.descCamera.text = camera.description
+        cell?.photoCamera.image = camera.photo
+        cell?.nameCamera.text = camera.name
+        cell?.descCamera.text = camera.description
         
         // Membuat ImageView Mempunyai Radius
-        cell.photoCamera.layer.cornerRadius = 4
-        cell.photoCamera.clipsToBounds = true
+        cell?.photoCamera.layer.cornerRadius = 4
+        cell?.photoCamera.clipsToBounds = true
         
-        return cell
+        return cell!
         
         
     }
+    
 }
 
 
@@ -89,5 +90,9 @@ extension ViewController: UITableViewDelegate {
         // Mendorong View Controller Lain
         self.navigationController?.pushViewController(detail, animated: true)
         
+        // Menghilangkan Warna Background Pada Cell Yang Sudah Dipilih
+        tableView.deselectRow(at: indexPath , animated: true)
+        
     }
+
 }

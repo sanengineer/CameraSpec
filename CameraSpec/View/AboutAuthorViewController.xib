@@ -22,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-profil-service-web-final-size" translatesAutoresizingMaskIntoConstraints="NO" id="2xt-zd-vm0">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foto-profil-ikhsan-BW-square" translatesAutoresizingMaskIntoConstraints="NO" id="2xt-zd-vm0">
                     <rect key="frame" x="137.5" y="60" width="100" height="100"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="K07-T8-Agl"/>
@@ -55,6 +55,6 @@
         </view>
     </objects>
     <resources>
-        <image name="icon-profil-service-web-final-size" width="201" height="201"/>
+        <image name="foto-profil-ikhsan-BW-square" width="1256" height="1256"/>
     </resources>
 </document>
