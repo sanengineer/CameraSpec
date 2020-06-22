@@ -19,9 +19,6 @@ class DetailViewController: UIViewController {
     // Membuat Konstanta Untuk Tombol Back
     let backButton = UIBarButtonItem()
     
-    // ??
-    let paragraphStyle = NSMutableParagraphStyle()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,6 +31,7 @@ class DetailViewController: UIViewController {
             nameCamera.text = result.name
             descCamera.text = result.description
         }
+
         
         // Membuat Tampilan Navigation Bar Menjadi Besar
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -54,3 +52,4 @@ class DetailViewController: UIViewController {
     }
 
 }
+
