@@ -19,8 +19,8 @@ class AboutAuthorViewController: UIViewController {
 
         self.navigationItem.title = "About"
         
-        aboutName.text = "San Engineer"
-        aboutEmail.text = "sanengineer@xxx.com"
+        aboutName.text = "Ikhsan Sugiarto"
+        aboutEmail.text = "sanenginer@gmail.com"
         // Do any additional setup after loading the view.
     }
 
