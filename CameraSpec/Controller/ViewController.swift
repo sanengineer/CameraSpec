@@ -14,9 +14,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var aboutAuthor: UIBarButtonItem!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let data = [Camera].self
-    
-    var filteredData: [Camera] = []
+    var searchCamera = cameraMany
+    var searching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,10 +36,6 @@ class ViewController: UIViewController{
         // Menambahkan Delegate Ke Table View
         cameraTableView.delegate = self
         
-        
-        // ??
-        searchBar.delegate = self
-        
     }
     
     
@@ -54,11 +49,21 @@ class ViewController: UIViewController{
 
 }
 
-extension ViewController: UITableViewDataSource, UISearchBarDelegate {
+extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        // Menambahkan Total Item Yang Akan Muncul Di Dalam Table View
-        return cameraMany.count
+        if searching {
+            
+            return searchCamera.count
+       
+        } else {
+            
+            // Menambahkan Total Item Yang Akan Muncul Di Dalam Table View
+            return cameraMany.count
+            
+        }
+        
+        
         
     }
     
@@ -70,10 +75,19 @@ extension ViewController: UITableViewDataSource, UISearchBarDelegate {
         // Menetapkan Nilai Hero Ke View Di Dalam Cell
         let camera = cameraMany[indexPath.row]
         
-        // Memasukkan Data Ke Setiap View Dan Label Yang Ada
-        cell?.photoCamera.image = camera.photo
-        cell?.nameCamera.text = camera.name
-        cell?.descCamera.text = camera.description
+        // ??
+        if searching {
+            cell?.nameCamera.text = searchCamera[indexPath.row]
+        } else {
+            
+            // Memasukkan Data Ke Setiap View Dan Label Yang Ada
+            cell?.photoCamera.image = camera.photo
+            cell?.nameCamera.text = camera.name
+            cell?.descCamera.text = camera.description
+        }
+        
+        
+        
         
         // Membuat ImageView Mempunyai Radius
         cell?.photoCamera.layer.cornerRadius = 4
@@ -81,18 +95,7 @@ extension ViewController: UITableViewDataSource, UISearchBarDelegate {
         
         return cell!
         
-        
     }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
-          filteredData = []
-          
-        for in cameraMany {
-              
-          }
-      }
-    
 }
 
 
@@ -112,5 +115,12 @@ extension ViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath , animated: true)
         
     }
+}
 
+extension ViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    
+        
+
+    }
 }
