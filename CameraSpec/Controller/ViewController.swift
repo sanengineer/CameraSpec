@@ -8,10 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     @IBOutlet weak var cameraTableView: UITableView!
     @IBOutlet weak var aboutAuthor: UIBarButtonItem!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    let data = [Camera].self
+    
+    var filteredData: [Camera] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +36,11 @@ class ViewController: UIViewController {
         
         // Menambahkan Delegate Ke Table View
         cameraTableView.delegate = self
+        
+        
+        // ??
+        searchBar.delegate = self
+        
     }
     
     
@@ -42,10 +52,9 @@ class ViewController: UIViewController {
         
     }
 
-
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // Menambahkan Total Item Yang Akan Muncul Di Dalam Table View
@@ -74,6 +83,15 @@ extension ViewController: UITableViewDataSource {
         
         
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+          filteredData = []
+          
+        for in cameraMany {
+              
+          }
+      }
     
 }
 
