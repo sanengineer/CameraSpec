@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var nameCamera: UILabel!
     @IBOutlet weak var photoCamera: UIImageView!
     @IBOutlet weak var descCamera: UILabel!
+    @IBOutlet weak var srcArticelCamera: UILabel!
     
     // Menampung Data Sementara
     var camera: Camera?
@@ -32,6 +33,7 @@ class DetailViewController: UIViewController {
             descCamera.text = result.description
         }
 
+        srcArticelCamera.text = "source: drpreview.com"
         
         // Membuat Tampilan Navigation Bar Menjadi Besar
         self.navigationController?.navigationBar.prefersLargeTitles = true
