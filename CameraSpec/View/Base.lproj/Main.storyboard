@@ -18,23 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jvi-MF-vpJ">
-                                <rect key="frame" x="0.0" y="172" width="375" height="495"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="i8j-HJ-7gc">
-                                <rect key="frame" x="0.0" y="116" width="375" height="56"/>
-                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="i8j-HJ-7gc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BMI-Mw-Sdl"/>
-                            <constraint firstItem="jvi-MF-vpJ" firstAttribute="top" secondItem="i8j-HJ-7gc" secondAttribute="bottom" id="LCr-Gt-Qc9"/>
-                            <constraint firstItem="i8j-HJ-7gc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="N28-Fx-BIR"/>
                             <constraint firstItem="jvi-MF-vpJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RpZ-XZ-fnT"/>
-                            <constraint firstItem="i8j-HJ-7gc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aBT-iQ-CrI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jvi-MF-vpJ" secondAttribute="trailing" id="dLw-WV-4GK"/>
+                            <constraint firstItem="jvi-MF-vpJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kM2-wQ-ohj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jvi-MF-vpJ" secondAttribute="bottom" id="uIl-T1-3Cl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -49,7 +41,6 @@
                     <connections>
                         <outlet property="aboutAuthor" destination="SbR-6t-9Xg" id="52a-aR-yqw"/>
                         <outlet property="cameraTableView" destination="jvi-MF-vpJ" id="VGR-9M-R1D"/>
-                        <outlet property="searchBar" destination="i8j-HJ-7gc" id="X1X-qr-0c7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

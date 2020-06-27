@@ -20,7 +20,7 @@ class AboutAuthorViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.navigationItem.title = "About"
         
-        aboutPhoto.layer.cornerRadius = 6
+        aboutPhoto.layer.cornerRadius = aboutPhoto.frame.height / 2
         aboutPhoto.clipsToBounds = true
         aboutName.text = "Ikhsan Sugiarto"
         aboutEmail.text = "sanenginer@gmail.com"
