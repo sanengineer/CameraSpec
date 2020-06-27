@@ -16,15 +16,15 @@ class ViewController: UIViewController{
     
     var cameras: [Camera] = []
 
-//    let searchController = UISearchController(searchResultsController: nil)
-    var searchController: UISearchController!
+    let searchController = UISearchController(searchResultsController: nil)
+//    var searchController: UISearchController!
     var resultController = UIViewController()
     
     var filteredCamera: [Camera] = []
     
     var isSearchBarEmpty: Bool {
-//        return searchController.searchBar.text?.isEmpty ?? true
-        return false
+        return searchController.searchBar.text?.isEmpty ?? true
+//        return false
     }
     
     var isFiltering: Bool {
@@ -61,7 +61,7 @@ class ViewController: UIViewController{
         self.navigationItem.title = "List Camera"
         
         // ??
-         searchController = UISearchController(searchResultsController: self.resultController)
+//         searchController = UISearchController(searchResultsController: self.resultController)
         
         // ??
 //        cameraTableView.tableHeaderView = self.searchController.searchBar
@@ -155,23 +155,23 @@ extension ViewController: UITableViewDataSource {
         // Menghubungkan Cell dengan Identifier "CameraCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: "CameraCell", for: indexPath) as? CameraTableViewCell
         
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "CameraCell", for: indexPath)
-//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "CameraCell", for: indexPath) as! CameraTableViewCell
+
         let camera: Camera
-        
+
         if isFiltering {
-            
+        
             // Menetapkan Nilai Hero Ke View Di Dalam Cell
-            // let camera = cameraMany[indexPath.row]
-            
+//             let camera = cameraMany[indexPath.row]
+        
             camera = filteredCamera[indexPath.row]
-            
+
         } else {
-            
+
             camera = cameraMany[indexPath.row]
 
         }
-        
+    
         // Memasukkan Data Ke Setiap View Dan Label Yang Ada
         cell?.photoCamera.image = camera.photo
         cell?.nameCamera.text = camera.name
@@ -194,14 +194,14 @@ extension ViewController: UITableViewDelegate {
         // Memanggil View Controller Dengan Berkas NIB/XIB Didalamnya
         let detail = DetailViewController(nibName:"DetailViewController", bundle: nil)
         
-        if isFiltering {
-             detail.camera = filteredCamera[indexPath.row]
-        } else {
-            detail.camera = cameraMany[indexPath.row]
-        }
+//        if isFiltering {
+//             detail.camera = filteredCamera[indexPath.row]
+//        } else {
+//            detail.camera = cameraMany[indexPath.row]
+//        }
 
         // Mengirim Data Camera
-//        detail.camera = cameraMany[indexPath.row]
+        detail.camera = cameraMany[indexPath.row]
         
         // Mendorong View Controller Lain
         self.navigationController?.pushViewController(detail, animated: true)
