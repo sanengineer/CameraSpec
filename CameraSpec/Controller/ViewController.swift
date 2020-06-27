@@ -194,21 +194,20 @@ extension ViewController: UITableViewDelegate {
         // Memanggil View Controller Dengan Berkas NIB/XIB Didalamnya
         let detail = DetailViewController(nibName:"DetailViewController", bundle: nil)
         
-        if isFiltering {
-             detail.camera = filteredCamera[indexPath.row]
-        } else {
-            detail.camera = cameraMany[indexPath.row]
-        }
+//        let camera: Camera
+//
+//        if isFiltering {
+//             camera = filteredCamera[indexPath.row]
+//        } else {
+//            camera = cameraMany[indexPath.row]
+//        }
 
+//        detail.camera = camera
         // Mengirim Data Camera
-//        detail.camera = cameraMany[indexPath.row]
+        detail.camera = cameraMany[indexPath.row]
         
         // Mendorong View Controller Lain
         self.navigationController?.pushViewController(detail, animated: true)
-        
-//        if isFiltering {
-//            self.navigationController?.pushViewController(detail, animated: true)
-//        }
         
         // Menghilangkan Warna Background Pada Cell Yang Sudah Dipilih
         tableView.deselectRow(at: indexPath , animated: true)
